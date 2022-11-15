@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+
+// => API  (http://www.omdbapi.com/?s=spider man&apikey=b912e3b5)
+
 import './App.css';
+import Navbar from './Components/navbar';
+import {Route, Routes} from 'react-router-dom';
+import WatchList from './Components/watchList';
+import Watched from './Components/watched';
+import Add from './Components/add';
+import ContextCom from 'myContext/ContextCom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ContextCom>
+        <Navbar />
+        <Routes>
+          <Route path='/watchList' element={<WatchList />} />
+          <Route path='/watched' element={<Watched />} />
+          <Route path='/add' element={<Add />} />
+        </Routes>
+      </ContextCom>
     </div>
   );
 }
