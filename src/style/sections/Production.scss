@@ -1,0 +1,52 @@
+@import "allStyleFile/configStyle.scss";
+
+.main-production {
+  margin: 5rem 0;
+  width: 100%;
+  padding:1rem 0;
+  overflow: hidden;
+  .container {
+    margin: 0 auto;
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+    .builder {
+      flex-basis: 38%;
+      h5{
+        color:$grayColor;
+        font-size:1.3rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+      h1{
+        margin-bottom: 1rem;
+        span{
+          color:$blueColor;
+        }
+      }
+      p{
+        color:#b5b5b5;
+        font-size:1.1rem;
+        line-height: 1.5;
+        margin-bottom:1rem;
+      }
+    }
+    .main-services {
+      flex-basis: 60%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .main-production {
+    .container {
+      flex-direction: column;
+      .main-services {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

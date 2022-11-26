@@ -1,0 +1,21 @@
+@import 'allStyleFile/configStyle.scss';
+
+.main-cardMovie{
+  position: relative;
+  .img {
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
+    :hover img {
+      transform: scale(1.1) rotate(-1deg);
+    }
+    img {
+      transition: $transition;
+      width: 100%;
+      border-radius: 6px;
+    }
+  }
+  &:hover .controls {
+    display: block;
+  }
+}

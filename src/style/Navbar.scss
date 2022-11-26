@@ -1,0 +1,117 @@
+@import "../style/configStyle.scss";
+
+.main-container {
+  position: fixed;
+  top:0;
+  background-color: white;
+  z-index:333;
+  color: $white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  .container {
+    width: 90%;
+    margin:0 auto;
+    .content-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1rem 0;
+      .logo {
+        .toggleIcon {
+          display: none;
+        }
+      }
+      .links {
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 4rem;
+          li {
+            cursor: pointer;
+            a {
+              color: $redColor;
+              text-transform: uppercase;
+              font-weight: 500;
+              font-size: 1rem;
+              transition: $transition;
+              letter-spacing: 2px;
+              &:hover {
+                color: $blueColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .main-container {
+    .container {
+      .content-container.active {
+        .links {
+          display: block;
+          position: relative;
+          transition: $transition;
+        }
+      }
+    }
+  }
+  .main-container {
+    .container {
+      .content-container {
+        align-items: flex-end;
+        .logo {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          .toggleIcon {
+            display: block;
+            cursor: pointer;
+            svg {
+              font-size: xx-large;
+              color: $blueColor;
+            }
+          }
+        }
+        .links {
+          display: none;
+          ul {
+            position:absolute;
+            right:0;
+            top:-2rem;
+            z-index: 333333;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 1.5rem;
+            padding: 2rem  1rem;
+            background-color: #000dff85;
+            li {
+              padding: 0.6rem 0.9rem;
+              text-align: center;
+              width:120px;
+              transition: $transition;
+              &:hover {
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                background-color: white;
+                a{color:$blueColor;width:100%}
+              }
+              a {
+                color: white;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../../style/configStyle.scss";
+
+.main-blog {
+  margin-bottom: 3rem;
+  .img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .history {
+    font-size: 0.9rem;
+    color: $blueColor;
+    transition: $transition;
+    cursor: pointer;
+    padding: 1rem 0;
+    &:hover {
+      color: $redColor;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    transition: $transition;
+    cursor: pointer;
+    color: $blackColor;
+    &:hover {
+      color: $blueColor;
+    }
+  }
+  p {
+    color: $blackColor;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .contact {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 2rem;
+    .box {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      .icon {
+        svg {
+          color: $blueColor;
+        }
+      }
+      span {
+        color: $blackColor;
+        transition: $transition;
+        cursor: pointer;
+        font-size: 0.9rem;
+        &:hover {
+          color: $blueColor;
+        }
+      }
+    }
+  }
+}

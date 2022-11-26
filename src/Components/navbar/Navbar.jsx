@@ -1,132 +1,87 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import theme from 'mainStyled/config';
-
+import React from "react";
+import "allStyleFile/Navbar.scss";
+import "allStyleFile/configStyle.scss";
+import { NavLink } from "react-router-dom";
+import img from "../../assets/logo.png";
+import { useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { HiXMark } from "react-icons/hi2";
 
 export default function Navbar() {
+  const [active, setActive] = useState(false);
+  const existActive = () => {
+    setActive(!active);
+  };
+
+  const activeToggle = ({isActive}) => {
+    return {
+      color: isActive ? "#e5f92c" : "",
+      fontSize: isActive ? "1.1rem" : "",
+      fontWeight: isActive ? '800' : '',
+    };
+  }
   return (
-    <Section>
+    <div className="main-container">
       <div className="container">
-        <div className="logo">
-          <NavLink
-            style={({ isActive }) => {
-              return { color: isActive ? `${theme.white}` : "" };
-            }}
-            to="/"
-          >
-            Movea
-          </NavLink>
-        </div>
-        <div className="links">
-          <ul>
-            <li>
-              <NavLink
-                style={({ isActive }) => {
-                  return { color: isActive ? `${theme.white}` : "" };
-                }}
-                to="watchList"
-              >
-                Watch List
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                style={({ isActive }) => {
-                  return { color: isActive ? `${theme.white}` : "" };
-                }}
-                to="watched"
-              >
-                Watched
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? `${theme.white}` : "",
-                    backgroundColor: isActive ? `${theme.yellow}` : "",
-                  };
-                }}
-                to="add"
-              >
-                Add
-              </NavLink>
-            </li>
-          </ul>
+        <div className={`content-container ${active === true ? "active" : ""}`}>
+          <div className="logo">
+            <NavLink to="/" className="imgLogo">
+              <img src={img} alt="logoImg" />
+            </NavLink>
+            <div className="toggleIcon">
+              {!active ? (
+                <AiOutlineMenu onClick={existActive} />
+              ) : (
+                <HiXMark onClick={existActive} />
+              )}
+            </div>
+          </div>
+          <div className="links">
+            <ul>
+              <li>
+                <NavLink style={activeToggle} to="/">
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink style={activeToggle} to="services">
+                  Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink style={activeToggle} to="gallery">
+                  Gallery
+                </NavLink>
+              </li>
+              <li>
+                <NavLink style={activeToggle} to="blogs">
+                  Blog
+                </NavLink>
+              </li>
+              <li>
+                <NavLink style={activeToggle} to="contact">
+                  Contact
+                </NavLink>
+              </li>
+              <li>
+                <NavLink style={activeToggle} to="watched">
+                  Watched
+                </NavLink>
+              </li>
+              <li>
+                <NavLink style={activeToggle} to="watchList">
+                  List
+                </NavLink>
+              </li>
+              <li>
+                <NavLink style={activeToggle} to="add">
+                  Add
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </Section>
+    </div>
   );
 }
-
-const Section = styled.section`
-  position: fixed;
-  z-index: 333;
-  background-color: ${theme.blackColor};
-  color: ${theme.white};
-  width: 100%;
-  height: 70px;
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    .logo a {
-      color: ${theme.yellow};
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      font-family: "Dosis", sans-serif;
-      font-weight: 800;
-      letter-spacing: 2px;
-      transition: ${theme.transition};
-      :hover {
-        color: ${theme.yellow};
-      }
-    }
-    .links ul {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 2rem;
-      li {
-        cursor: pointer;
-        :last-of-type {
-          border-radius: 6px;
-          background-color: black;
-          text-transform: uppercase;
-          width: 70px;
-          height: 40px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          :hover {
-            background-color: #886a6a;
-            a {
-              color: ${theme.yellow};
-            }
-          }
-          a {
-            border-radius: 6px;
-            color: ${theme.white};
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-          }
-        }
-        a {
-          color: #777;
-          font-size: 1.2rem;
-          transition: ${theme.transition};
-          :hover {
-            color: ${theme.white};
-          }
-        }
-      }
-    }
-  }
-`;

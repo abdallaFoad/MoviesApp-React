@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;600;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,700;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;600;800&family=Lato:wght@100;300;400;700&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,700&family=Raleway:wght@100;200;300;500;600;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,700;0,900;1,400&display=swap');
 
 *{
   margin:0;
@@ -11,6 +11,15 @@ html{
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
+::-webkit-scrollbar{
+  width:.8rem;
+  background-color: #dbd7d7;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #3b55e6;
+  border-radius: .8rem;
+
+}
 ul{
   list-style: none;
   padding:0;
@@ -18,25 +27,4 @@ ul{
 }
 a{
   text-decoration: none;
-}
-.container{
-  padding-left: 2rem;
-  padding-right: 2rem;
-  height:100%;
-  margin: 0 auto;
-}
-@media (min-width:768px){
-  .container{
-    width:750px;
-  }
-}
-@media (min-width:769px) and (max-width: 991px){
-  .container{
-    width:950px;
-  }
-}
-@media (min-width:991px) and (max-width: 1200px){
-  .container{
-    width:1170px;
-  }
 }

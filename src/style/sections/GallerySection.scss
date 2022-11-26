@@ -1,0 +1,29 @@
+@import '../../style/configStyle.scss';
+
+
+.gallery{
+  padding:7rem 0 5rem 0;
+  width:100%;
+  overflow: hidden;
+  .container{
+    width:90%;
+    margin: 0 auto;
+    .albums{
+      width:100%;
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap:4rem 2rem;
+    }
+  }
+}
+@media (min-width:320px) and (max-width:786px){
+  .gallery{
+    .container{
+      .albums{
+        .album{
+          width:16rem;
+        }
+      }
+    }
+  }
+}

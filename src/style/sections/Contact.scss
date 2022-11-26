@@ -1,0 +1,95 @@
+@import '../../style/configStyle.scss';
+
+.main-contact{
+  padding-top:10rem;
+  width:100%;
+  font-family: Montserrat, sans-serif;
+  .container{
+    padding:5rem 0;
+    width:90%;
+    margin:0 auto;
+    .contact-info{
+      display:grid;
+      grid-template-columns:  33% auto;
+      gap:3rem;
+      .contacts{
+        h1{
+          color:$blackColor;
+          font-size:1.6rem;
+          margin-bottom:2rem;
+        } 
+        .information{
+          font-size:1.1rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          margin-bottom:1rem;
+          color:$blackColor;
+          span{
+            font-size:  1rem;
+            text-transform: capitalize;
+            font-weight: 400;
+            color:#808080;
+            font-family: Lato, sans-serif
+          }
+        }
+        .social{
+          display:flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap:1rem;
+          margin-top:2rem;
+          a{
+            svg{
+              color:$blueColor;
+              font-size:1.4rem;
+              transition: $transition;
+              &:hover{
+                color:$blackColor;
+              }
+            }
+          }
+        }
+      }
+      .touch{
+        h1{
+           color:$blackColor;
+          font-size:1.6rem;
+          margin-bottom:2rem;
+          padding-bottom:1rem;
+          position:relative;
+          &::before{
+            content: '';
+            position:absolute;
+            width:5rem;
+            height:2px;
+            background-color: $blueColor;
+            left:0;
+            bottom:0;
+            border-radius: 6px;
+          }
+        }
+        form{
+          display:flex;
+          align-items: flex-start;
+          flex-direction: column;
+          gap:1rem;
+          input,textarea{
+            width:100%;
+            padding:1rem;
+            border:none;
+            background-color: #f8f8f8;
+            outline: none;
+            &::placeholder{
+              font-size:1.1rem;
+              font-family: Lato, sans-serif
+            }
+            &:focus{
+              outline: 2px solid #f8f8f8;
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

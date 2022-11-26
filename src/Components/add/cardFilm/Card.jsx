@@ -1,17 +1,18 @@
-import React from "react";
-import defaultImg from "images/download.png";
-import { useMovieContent } from "myContext/ContextCom";
 import * as actions from "myContext/actions/action";
+import { useMovieContent } from "myContext/ContextCom";
+import React from "react";
 
 const Card = ({ movie }) => {
   const movieContext = useMovieContent();
- 
+
   const watchListDisabled = movieContext.watchList.find(
-    (mov) => mov.imdbID === movie.imdbID);
-  
+    (mov) => mov.imdbID === movie.imdbID
+  );
+
   const watchedDisabled = movieContext.watched.find(
-    (mov) => mov.imdbID === movie.imdbID);
-  
+    (mov) => mov.imdbID === movie.imdbID
+  );
+
   const checkWatchList = watchListDisabled
     ? true
     : watchedDisabled
@@ -40,9 +41,9 @@ const Card = ({ movie }) => {
               })
             }
             disabled={checkWatchList}
-            className='watchList'
-            >
-             WatchList
+            className="watchList"
+          >
+            WatchList
           </button>
           <button
             onClick={() =>
@@ -52,8 +53,8 @@ const Card = ({ movie }) => {
               })
             }
             disabled={checkWatched}
-            className='watched'
-            >
+            className="watched"
+          >
             Watched
           </button>
         </div>

@@ -1,0 +1,28 @@
+@import 'allStyleFile/configStyle.scss';
+
+.services-card{
+   font-family: 'Montserrat', sans-serif;
+    width:10rem;
+    width: 100%;
+  .img{
+    width:3rem;
+    height:3rem;
+    img{
+      width:100%;
+    }
+  }
+  .title{
+    font-size:1.8rem;
+    font-weight: 800;
+    margin:1rem 0;
+    cursor: pointer;
+    transition: $transition;
+    &:hover{
+      color:$blueColor;
+    }
+  }
+  .paragraph{
+    font-size:1rem;
+    color:#b5b5b5;
+  }
+}

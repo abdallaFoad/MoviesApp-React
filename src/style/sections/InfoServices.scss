@@ -1,0 +1,35 @@
+@import '../../style/configStyle.scss';
+
+
+.info-ser{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+  width:100%;
+  .info{
+    .info-title{
+      font-size:1.8rem;
+      font-weight: 900;
+      color:$blackColor;
+      cursor: pointer;
+      transition: $transition;
+      margin-bottom: 1.5rem;
+      &:hover{
+        color:$blueColor;
+      }
+    }
+    p{
+      color:#808080;
+      font-size:1rem;
+      line-height: 1.4;
+    }
+  }
+}
+.info-ser.paddingRight{
+  padding-right:4rem;
+}
+.info-ser.paddingLeft{
+  padding-left:4rem;
+}

@@ -1,0 +1,34 @@
+@import "allStyleFile/configStyle.scss";
+
+.main-clients {
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  .container {
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    .box {
+      position: relative;
+      margin:0 auto;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #f8f8f8b2;
+        transition: $transition;
+      }
+      &:hover:before {
+        width: 0%;
+        height: 0%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

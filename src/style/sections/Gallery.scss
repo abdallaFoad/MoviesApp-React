@@ -1,0 +1,20 @@
+@import 'allStyleFile/configStyle.scss';
+
+.main-gallery{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding:3rem 0;
+  .container{
+    width:100%;
+    margin:0 auto;
+    .albums{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap:1rem;
+      
+    }
+  }
+}
