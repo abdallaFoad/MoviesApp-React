@@ -1,13 +1,29 @@
 {
   "files": {
-    "main.css": "/MoviesApp-React/static/css/main.060855be.css",
-    "main.js": "/MoviesApp-React/static/js/main.735c9ed7.js",
+    "main.css": "/MoviesApp-React/static/css/main.4ecbbcbd.css",
+    "main.js": "/MoviesApp-React/static/js/main.ad7982be.js",
+    "static/media/First-Flight-Aerial-Drone-video-around-Hudson-River-New-York-2016-4K.mp4": "/MoviesApp-React/static/media/First-Flight-Aerial-Drone-video-around-Hudson-River-New-York-2016-4K.d71be208c6386822720b.mp4",
+    "static/media/services-bg.jpg": "/MoviesApp-React/static/media/services-bg.75ee5f86dbea96497f92.jpg",
+    "static/media/Depositphotos_115127378_original-585x330.jpg": "/MoviesApp-React/static/media/Depositphotos_115127378_original-585x330.ef52ab7fb7c67d7e90a9.jpg",
+    "static/media/blog1.jpg": "/MoviesApp-React/static/media/blog1.90989ed083d147383903.jpg",
+    "static/media/blog5.jpg": "/MoviesApp-React/static/media/blog5.e57a56cea045e3b6a77d.jpg",
+    "static/media/blog3.jpg": "/MoviesApp-React/static/media/blog3.fbc246d0bfc62b9433b2.jpg",
+    "static/media/blog4.jpg": "/MoviesApp-React/static/media/blog4.a612466d1237ada4349c.jpg",
+    "static/media/Depositphotos_46365137_original-370x270.jpg": "/MoviesApp-React/static/media/Depositphotos_46365137_original-370x270.2ded78959a9aef3c0dc4.jpg",
+    "static/media/Depositphotos_143917421_original-370x270.jpg": "/MoviesApp-React/static/media/Depositphotos_143917421_original-370x270.ab130c4b0a10baa65cdf.jpg",
+    "static/media/video-bg.jpg": "/MoviesApp-React/static/media/video-bg.041defa7955b0521788a.jpg",
+    "static/media/Depositphotos_11162141_original-370x270.jpg": "/MoviesApp-React/static/media/Depositphotos_11162141_original-370x270.d055ac7e499f77643fa8.jpg",
+    "static/media/Depositphotos_139834922_original-370x270.jpg": "/MoviesApp-React/static/media/Depositphotos_139834922_original-370x270.11518a069a92351acf85.jpg",
+    "static/media/blog2.jpg": "/MoviesApp-React/static/media/blog2.4c5a989a8216d87e8118.jpg",
+    "static/media/Depositphotos_23645569_original-370x270.jpg": "/MoviesApp-React/static/media/Depositphotos_23645569_original-370x270.a54ff8b7140fbc34598a.jpg",
+    "static/media/Depositphotos_55788597_original-370x270.jpg": "/MoviesApp-React/static/media/Depositphotos_55788597_original-370x270.c3bfffdb7ac244d79bdb.jpg",
+    "static/media/Depositphotos_9688167_original-370x270.jpg": "/MoviesApp-React/static/media/Depositphotos_9688167_original-370x270.2510e15e9dce48fc2b18.jpg",
     "index.html": "/MoviesApp-React/index.html",
-    "main.060855be.css.map": "/MoviesApp-React/static/css/main.060855be.css.map",
-    "main.735c9ed7.js.map": "/MoviesApp-React/static/js/main.735c9ed7.js.map"
+    "main.4ecbbcbd.css.map": "/MoviesApp-React/static/css/main.4ecbbcbd.css.map",
+    "main.ad7982be.js.map": "/MoviesApp-React/static/js/main.ad7982be.js.map"
   },
   "entrypoints": [
-    "static/css/main.060855be.css",
-    "static/js/main.735c9ed7.js"
+    "static/css/main.4ecbbcbd.css",
+    "static/js/main.ad7982be.js"
   ]
 }
